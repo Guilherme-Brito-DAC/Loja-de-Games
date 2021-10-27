@@ -5,6 +5,12 @@ class JogoController{
     {
         $obj = new Jogo();
 
+        $obj->nome = $_POST["nome"];
+        $obj->midia = $_POST["midia"];
+        $obj->genero = $_POST["genero"];
+        $obj->classificacao = $_POST["classificacao"];
+        $obj->estoque = $_POST["estoque"];
+
         $obj -> create();
         $this->read();
     }
@@ -23,8 +29,13 @@ class JogoController{
     public function Editar()
     {
         $obj = new Jogo();
-        $obj->setId($_POST["id"]);
+        $obj->id = $_POST["id"];
 
+        $obj->nome = $_POST["nome"];
+        $obj->midia = $_POST["midia"];
+        $obj->genero = $_POST["genero"];
+        $obj->classificacao = $_POST["classificacao"];
+        $obj->estoque = $_POST["estoque"];
 
         $obj -> update();
         $this->read();
@@ -33,7 +44,8 @@ class JogoController{
     public function Deletar()
     {
         $obj = new Jogo();
-        $obj->setId($_POST["id"]);
+        $obj->id = $_POST["id"];
+
         $obj->delete();
         $this->read();
     }

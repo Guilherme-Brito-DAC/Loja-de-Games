@@ -1,10 +1,14 @@
 <?php
 class Jogo 
 {
-    private $id;
+    public $id;
+    public $nome;
+    public $midia;
+    public $genero;
+    public $classificacao;
+    public $estoque;
 
-    
-    private $con;
+    public $con;
 
     public function __construct()
     {
@@ -12,30 +16,39 @@ class Jogo
         $this->con = $conexao->retornarConexao();
     }
 
-    public function create()
+    public function Criar()
     {
-        $sql = $this->con->prepare("");
-        $sql->execute([]);
+        $sql = $this->con->prepare("INSERT INTO jogo (id, nome, midia, genero, classificacao, estoque) VALUES (null,?,?,?,?,?)");
+        $sql->execute([$this->nome,$this->midia,$this->genero,$this->classificacao,$this->estoque]);
     }
 
-	public function read()
+    public function Buscar($campo,$pesquisa)
     {
-        $sql = $this->con->prepare("SELECT * FROM jogos");
+        $sql = $this->con->prepare("SELECT * FROM jogo WHERE ? LIKE ?");
+        $sql->execute([$campo,$pesquisa]);
+        $row = $sql->fetchAll();
+
+        return $row;		
+	}
+
+	public function Listar()
+    {
+        $sql = $this->con->prepare("SELECT * FROM jogo");
         $sql->execute();
         $row = $sql->fetchAll();
 
         return $row;		
 	}
 
-	public function update()
+	public function Editar()
     {
-        $sql = $this->con->prepare("");
-		$sql->execute([]);
+        $sql = $this->con->prepare("UPDATE jogo SET nome = ?, midia = ?, genero = ?, classificacao = ?, estoque = ?  WHERE id=?");
+		$sql->execute([$this->nome,$this->midia,$this->genero,$this->classificacao,$this->estoque,$this->id]);
 	}
 
-	public function delete()
+	public function Deletar()
     {
-		$sql = $this->con->prepare("DELETE FROM jogos WHERE id=?");
+		$sql = $this->con->prepare("DELETE FROM jogo WHERE id=?");
 		$sql->execute([$this->id]);
 	}
 }
