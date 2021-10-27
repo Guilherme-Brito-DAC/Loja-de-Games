@@ -4,7 +4,6 @@ class Cliente
     public $id;
     public $nome;
     public $endereco;
-    public $idade;
     public $email;
     public $senha;
 
@@ -18,14 +17,21 @@ class Cliente
 
     public function Criar()
     {
-        $sql = $this->con->prepare("INSERT INTO cliente (id, nome, endereco, idade, email, senha) VALUES (null,?,?,?,?,?)");
-        $sql->execute([$this->nome,$this->endereco,$this->idade,$this->email,$this->senha]);
+        $sql = $this->con->prepare("INSERT INTO cliente (id, nome, endereco, email, senha) VALUES (null,?,?,?,?)");
+        $sql->execute([$this->nome,$this->endereco,$this->email,$this->senha]);
+    }
+
+    public function ListarUmCliente(){
+        $sql = $this->con->prepare("SELECT * FROM cliente WHERE email = ? AND senha = ?");
+        $sql->execute([$this->email,$this->senha]);
+        $row = $sql->fetchAll();
+        return $row;
     }
 
     public function Login()
     {
         $sql = $this->con->prepare("SELECT * FROM cliente WHERE email = ? AND senha = ?");
-        $sql->execute();
+        $sql->execute([$this->email,$this->senha]);
         $count = $sql->fetchColumn();
 
         if($count > 0)
@@ -40,8 +46,8 @@ class Cliente
 
 	public function Editar()
     {
-        $sql = $this->con->prepare("UPDATE cliente SET nome = ?, endereco = ?, idade = ?, email = ?, senha = ?  WHERE id=?");
-		$sql->execute([$this->nome,$this->endereco,$this->idade,$this->email,$this->senha,$this->id]);
+        $sql = $this->con->prepare("UPDATE cliente SET nome = ?, endereco = ?, email = ?, senha = ?  WHERE id=?");
+		$sql->execute([$this->nome,$this->endereco,$this->email,$this->senha,$this->id]);
 	}
 
 	public function Deletar()

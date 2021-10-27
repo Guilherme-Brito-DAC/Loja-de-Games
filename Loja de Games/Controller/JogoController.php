@@ -11,19 +11,30 @@ class JogoController{
         $obj->classificacao = $_POST["classificacao"];
         $obj->estoque = $_POST["estoque"];
 
-        $obj -> create();
+        $obj -> Criar();
         $this->read();
+    }
+
+    public function Pesquisar()
+    {
+        session_start();
+        $obj = new Jogo();
+        $Jogos = $obj->Pesquisar($_POST["pesquisar"]);
+
+        $_SESSION["Jogos"] = $Jogos;
+
+        header('Location: ./view/main.php');
     }
 
     public function Listar()
     {
         session_start();
         $obj = new Jogo();
-        $Jogos = $obj->read();
+        $Jogos = $obj->Listar();
 
         $_SESSION["Jogos"] = $Jogos;
 
-        header('Location: ');
+        header('Location: ./view/main.php');
     }
 
     public function Editar()
@@ -37,7 +48,7 @@ class JogoController{
         $obj->classificacao = $_POST["classificacao"];
         $obj->estoque = $_POST["estoque"];
 
-        $obj -> update();
+        $obj -> Editar();
         $this->read();
     }
         
@@ -46,7 +57,7 @@ class JogoController{
         $obj = new Jogo();
         $obj->id = $_POST["id"];
 
-        $obj->delete();
+        $obj->Deletar();
         $this->read();
     }
 }

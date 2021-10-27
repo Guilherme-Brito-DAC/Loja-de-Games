@@ -7,6 +7,7 @@ class Jogo
     public $genero;
     public $classificacao;
     public $estoque;
+    public $imagem;
 
     public $con;
 
@@ -18,15 +19,24 @@ class Jogo
 
     public function Criar()
     {
-        $sql = $this->con->prepare("INSERT INTO jogo (id, nome, midia, genero, classificacao, estoque) VALUES (null,?,?,?,?,?)");
-        $sql->execute([$this->nome,$this->midia,$this->genero,$this->classificacao,$this->estoque]);
+        $sql = $this->con->prepare("INSERT INTO jogo (id, nome, midia, genero, classificacao, estoque, imagem) VALUES (null,?,?,?,?,?,?)");
+        $sql->execute([$this->nome,$this->midia,$this->genero,$this->classificacao,$this->estoque, $this->imagem]);
     }
 
-    public function Buscar($campo,$pesquisa)
+    public function Pesquisar($pesquisa)
     {
-        $sql = $this->con->prepare("SELECT * FROM jogo WHERE ? LIKE ?");
-        $sql->execute([$campo,$pesquisa]);
-        $row = $sql->fetchAll();
+        if($pesquisa == "")
+        {
+            $sql = $this->con->prepare("SELECT * FROM jogo");
+            $sql->execute();
+            $row = $sql->fetchAll();
+        }
+        else
+        {
+            $sql = $this->con->prepare("SELECT * FROM jogo WHERE nome LIKE ? ");
+            $sql->execute(['%'.$pesquisa.'%']);
+            $row = $sql->fetchAll();
+        }
 
         return $row;		
 	}

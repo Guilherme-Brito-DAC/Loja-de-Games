@@ -1,0 +1,122 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+
+.menu{
+    background-color: #2a2a2a;
+    width: 100%;
+    height: 4rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+}
+
+.menu p:first-letter {
+    text-transform: uppercase;
+}
+
+.pesquisa{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+}
+
+.pesquisa div{
+    display:flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.pesquisa h1{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.hidden{
+    background: none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    background-color:#202020;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.pesquisarForm{
+    width: 14rem;
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    background-color:#202020;
+    border-radius: 5px;
+    padding: 0.8rem;
+}
+
+.pesquisarForm input{
+    background: none;
+    color:white;
+    outline: none;
+    border:none;
+}
+
+.listaJogos{
+    display:flex;
+    flex-wrap: wrap;
+    color:white;
+    gap: 2rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    justify-content:space-around;
+}
+
+.jogo{
+    width: 20rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.jogo:hover{
+    transform: scale(1.01);
+}
+
+.jogo img{
+    object-fit: cover;
+    width: 100%;
+    height: 30rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.jogo h1{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.descricao{
+    display:flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.classificao{
+    color:white;
+    background-color: brown;
+    padding: 0.8rem;
+    border-radius: 10px;
+}

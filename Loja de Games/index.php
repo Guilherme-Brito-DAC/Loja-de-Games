@@ -1,5 +1,11 @@
 <?php
 
+require_once "Conexao/Conexao.php";
+require_once "Model/Cliente.php";
+require_once "Model/Funcionario.php";
+require_once "Model/Jogo.php";
+require_once "Model/Venda.php";
+
 require_once "Controller/ClienteController.php";
 require_once "Controller/FuncionarioController.php";
 require_once "Controller/JogoController.php";
@@ -11,7 +17,6 @@ $jogo = new JogoController();
 $venda = new VendaController();
 
 if (isset($_GET['acao'])) {
-
     switch ($_GET['acao']) 
     {
         case 'criarJogo':
@@ -20,6 +25,10 @@ if (isset($_GET['acao'])) {
 
         case 'listarJogos':
             $jogo->Listar();
+            break;
+
+        case 'pesquisar':
+            $jogo->Pesquisar();
             break;
         
         case 'editarJogo':
@@ -42,12 +51,12 @@ if (isset($_GET['acao'])) {
             $cliente->Login();
             break;
 
-        case 'cadastroCliente':
-            $cliente->Cadastrar();
+        case 'logoffCliente':
+            $cliente->Logoff();
             break;
 
-        default:
-            header('Location: ./view/login_de_cliente.php');
+        case 'cadastroCliente':
+            $cliente->Cadastrar();
             break;
     }
 } 
