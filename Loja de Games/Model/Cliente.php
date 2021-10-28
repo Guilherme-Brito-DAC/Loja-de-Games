@@ -25,7 +25,15 @@ class Cliente
         $sql = $this->con->prepare("SELECT * FROM cliente WHERE email = ? AND senha = ?");
         $sql->execute([$this->email,$this->senha]);
         $row = $sql->fetchAll();
-        return $row;
+
+        if(sizeof($row) > 0)
+        {
+            return $row[0];
+        }
+        else
+        {
+            return $row;
+        }
     }
 
     public function Login()

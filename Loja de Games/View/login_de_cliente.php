@@ -19,7 +19,7 @@
             <br/>
             <button type="submit">Login</button>
             <br/>
-            <span>Não tem uma conta ainda?<a href="./cadastro_de_Cliente.php">Cadastro</a></span>
+            <span><p style="opacity:0.6">Não tem uma conta ainda?</p><a href="./cadastro_de_Cliente.php">Cadastro</a></span>
         </form>
     </main>
     <a href="./login_de_funcionario.php" id="funcionario">Sou funcionario</a>

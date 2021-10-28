@@ -34,6 +34,7 @@ class ClienteController{
 
     public function Logoff()
     {
+        session_start();
         session_destroy();
         header("Location: ./view/login_de_cliente.php");
     }

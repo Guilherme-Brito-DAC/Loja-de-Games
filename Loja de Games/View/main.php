@@ -1,5 +1,11 @@
 <?php
     session_start();
+
+    if($_SESSION["usuario"] == null)
+    {
+        header("Location: ../index.php");
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,8 +20,11 @@
 </head>
 <body>
     <div class="menu">
-        <img src="https://img.icons8.com/pastel-glyph/40/ffffff/controller--v1.png"/>
-        <a href="../index.php?acao=logoffCliente">Sair</a>
+        <span style="display:flex;align-items:center;font-weight:500;gap:5px">
+            <img class="icone" src="./imgs/icon.png"/>
+            <label>Next Jogos</label>
+        </span>
+        <a href="../index.php?acao=logoffCliente" style="margin-right:2rem">Sair</a>
     </div>
     <div class="pesquisa">
         <h1>Jogos</h1>

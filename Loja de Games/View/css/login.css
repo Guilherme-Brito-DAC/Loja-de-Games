@@ -16,7 +16,6 @@ main{
 form{
     padding: 2rem;
     background-color: #1e1e1e;
-    border-radius: 20px;
 }
 
 input{
@@ -42,14 +41,16 @@ span{
 }
 
 a{
-    color:#007acc;
+    color:white;
+    text-decoration: none;
     background: none;
 }
 
 #funcionario{
     text-align: center;
     background: none;
-    color:#007acc;
+    color:white;
+    text-decoration: none;
     position: fixed;
     margin-bottom: 1.5rem;
     left: 0;
