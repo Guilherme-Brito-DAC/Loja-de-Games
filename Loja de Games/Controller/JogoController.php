@@ -3,16 +3,29 @@ class JogoController{
 
     public function Criar()
     {
-        $obj = new Jogo();
 
-        $obj->nome = $_POST["nome"];
-        $obj->midia = $_POST["midia"];
-        $obj->genero = $_POST["genero"];
-        $obj->classificacao = $_POST["classificacao"];
-        $obj->estoque = $_POST["estoque"];
+        session_start();
+        try 
+        {
+            $obj = new Jogo();
 
-        $obj -> Criar();
-        $this->read();
+            $obj->nome = $_POST["nome"];
+            $obj->midia = $_POST["midia"];
+            $obj->genero = $_POST["genero"];
+            $obj->classificacao = $_POST["classificacao"];
+            $obj->estoque = $_POST["estoque"];
+            $obj->imagem = $_POST["imagem"];
+    
+            $obj -> Criar();
+
+            $_SESSION["mensagem"] = "Sucesso! Usuário cadastrado com êxito!";
+            $this->Listar();
+	    } 
+        catch(Exception $e) 
+        {
+            $_SESSION["mensagem"] = "Aconteceu algum erro";
+            $this->Listar();
+		}
     }
 
     public function Pesquisar()
@@ -49,7 +62,7 @@ class JogoController{
         $obj->estoque = $_POST["estoque"];
 
         $obj -> Editar();
-        $this->read();
+        $this->Listar();
     }
         
     public function Deletar()
@@ -58,6 +71,6 @@ class JogoController{
         $obj->id = $_POST["id"];
 
         $obj->Deletar();
-        $this->read();
+        $this->Listar();
     }
 }
