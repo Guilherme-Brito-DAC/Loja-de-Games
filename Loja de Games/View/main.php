@@ -73,12 +73,17 @@ for ($i = 0; $i < count($_SESSION["Jogos"]); $i++)
         if($_SESSION["usuario"][5] == "funcionario")
         {
             echo '<div class="icones">';
-            echo "<a href='../index.php?acao=editarJogo/".$_SESSION['Jogos'][$i]['id']."' class='iconeGame'><img src='https://img.icons8.com/ios-glyphs/30/dba10d/edit--v1.png'/></a>";
-            echo "
-                <form class='deletar' action='../index.php?acao=deletarJogo' method='post'>
+            
+            echo "<form class='deletar' action='../index.php?acao=editarJogo' method='post'>
                     <input style='display:none' name='id' value='".$_SESSION['Jogos'][$i]['id']."'/>
-                    <button type='submit' class='iconeGame'><img src='https://img.icons8.com/flat-round/30/000000/delete-sign.png'/><button>
+                    <button type='submit' class='iconeGame'><img src='https://img.icons8.com/ios-glyphs/30/dba10d/edit--v1.png'/><button>
                 </form>";
+
+            echo "<form class='deletar' id='".$_SESSION['Jogos'][$i]['id']."' action='../index.php?acao=deletarJogo' method='post'>
+                    <input style='display:none' name='id' value='".$_SESSION['Jogos'][$i]['id']."'/>
+                    <button type='button' onclick='Deletar(".$_SESSION['Jogos'][$i]['id'].")' class='iconeGame'><img src='https://img.icons8.com/flat-round/30/000000/delete-sign.png'/><button>
+                </form>";
+
             echo '</div>';
         }
 
@@ -90,6 +95,17 @@ for ($i = 0; $i < count($_SESSION["Jogos"]); $i++)
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.js" integrity="sha512-eOUPKZXJTfgptSYQqVilRmxUNYm0XVHwcRHD4mdtCLWf/fC9XWe98IT8H1xzBkLL4Mo9GL0xWMSJtgS5te9rQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        function Deletar(id)
+        {
+            alertify.confirm("Tem certeza que deseja deletar esse jogo?",
+            function(){
+                document.getElementById(id).submit()
+            },
+            function(){
+            })
+        }
+    </script>
     <script type="text/javascript">
         function alerta(mensagem)
         {

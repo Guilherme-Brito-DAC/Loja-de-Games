@@ -32,6 +32,10 @@ if (isset($_GET['acao'])) {
             break;
         
         case 'editarJogo':
+            $jogo->EditarView();
+            break;
+
+        case 'editarUmJogo':
             $jogo->Editar();
             break;
 

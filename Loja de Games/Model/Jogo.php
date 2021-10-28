@@ -50,6 +50,22 @@ class Jogo
         return $row;		
 	}
 
+    public function ListarUmJogo()
+    {
+        $sql = $this->con->prepare("SELECT * FROM jogo WHERE id = ?");
+        $sql->execute([$this->id]);
+        $row = $sql->fetchAll();
+
+        if(sizeof($row) > 0)
+        {
+            return $row[0];
+        }
+        else
+        {
+            return $row;
+        }		
+	}
+
 	public function Editar()
     {
         $sql = $this->con->prepare("UPDATE jogo SET nome = ?, midia = ?, genero = ?, classificacao = ?, estoque = ?  WHERE id=?");
