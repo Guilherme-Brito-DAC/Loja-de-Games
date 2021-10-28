@@ -21,7 +21,8 @@ class Cliente
         $sql->execute([$this->nome,$this->endereco,$this->email,$this->senha]);
     }
 
-    public function ListarUmCliente(){
+    public function ListarUmCliente()
+    {
         $sql = $this->con->prepare("SELECT * FROM cliente WHERE email = ? AND senha = ?");
         $sql->execute([$this->email,$this->senha]);
         $row = $sql->fetchAll();

@@ -5,7 +5,6 @@ require_once "Model/Cliente.php";
 require_once "Model/Funcionario.php";
 require_once "Model/Jogo.php";
 require_once "Model/Venda.php";
-
 require_once "Controller/ClienteController.php";
 require_once "Controller/FuncionarioController.php";
 require_once "Controller/JogoController.php";

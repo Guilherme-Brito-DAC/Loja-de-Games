@@ -89,7 +89,7 @@ for ($i = 0; $i < count($_SESSION["Jogos"]); $i++)
 
         echo '</div>';
         echo '</div>';
-}
+        }
 
         ?>
 

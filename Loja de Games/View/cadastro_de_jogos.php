@@ -85,7 +85,6 @@
         txt_imagem.onblur = function()
         {
             preview.src = txt_imagem.value
-            console.log(preview)
         }
 
     </script>

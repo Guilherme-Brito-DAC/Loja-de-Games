@@ -3,7 +3,6 @@ class JogoController{
 
     public function Criar()
     {
-
         session_start();
         try 
         {

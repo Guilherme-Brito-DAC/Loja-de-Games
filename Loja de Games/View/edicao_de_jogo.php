@@ -49,18 +49,15 @@
                 <br/>
                 <label class="lbl">Mídia</label>
                 <select name="midia" class="input">
-                    
                     <option value="PC">PC</option>
                     <option value="Mobile">Mobile</option>
                     <option value="Playstation">Playstation</option>
                     <option value="Xbox">Xbox</option>
                     <option value="Nintendo">Nintendo</option>
-
                 </select>
                 <br/>
                 <label class="lbl">Gênero</label>
                 <select name="genero" class="input">
-
                     <option value="Ação">Ação</option>
                     <option value="Aventura">Aventura</option>
                     <option value="Estratégia">Estratégia</option>
@@ -69,7 +66,6 @@
                     <option value="Corrida">Corrida</option>
                     <option value="Jogo on-line">Jogo on-line</option>
                     <option value="Simulação">Simulação</option>
-
                 </select>
                 <br/>
                 <label class="lbl">Classificação</label>
