@@ -1,0 +1,30 @@
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\bin\Debug\netcoreapp3.1\loja_de_games.exe
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\bin\Debug\netcoreapp3.1\loja_de_games.deps.json
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\bin\Debug\netcoreapp3.1\loja_de_games.runtimeconfig.json
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\bin\Debug\netcoreapp3.1\loja_de_games.runtimeconfig.dev.json
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\bin\Debug\netcoreapp3.1\loja_de_games.dll
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\bin\Debug\netcoreapp3.1\loja_de_games.pdb
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.csproj.AssemblyReference.cache
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Cadastro_de_Cliente.resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Cadastro_de_funcionario.resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Jogos.resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Login_de_Cliente - Copy (2) - Copy.resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Login_de_Cliente - Copy (2).resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Login_de_Cliente - Copy (3).resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Login_de_Cliente - Copy - Copy (2).resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Login_de_Cliente - Copy - Copy - Copy.resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Login_de_Cliente - Copy - Copy.resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Login_de_Cliente - Copy.resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Login_de_Cliente.resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Login_de_Funcionario.resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Main.resources
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.csproj.GenerateResource.cache
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.AssemblyInfoInputs.cache
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.AssemblyInfo.cs
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.csproj.CoreCompileInputs.cache
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.dll
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.pdb
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.genruntimeconfig.cache
+C:\Users\guilh\source\repos\loja_de_games\loja_de_games\obj\Debug\netcoreapp3.1\loja_de_games.Properties.Resources.resources

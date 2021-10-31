@@ -35,13 +35,3 @@ CREATE TABLE IF NOT EXISTS `jogo` (
   `imagem` varchar(1000) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
-DROP TABLE IF EXISTS `venda`;
-CREATE TABLE IF NOT EXISTS `venda` (
-  `protocolo` int(11) NOT NULL,
-  `valor_venda` float NOT NULL,
-  `funcionario_id` int(11) NOT NULL,
-  `cliente_id` int(11) NOT NULL,
-  `venda_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-COMMIT;
