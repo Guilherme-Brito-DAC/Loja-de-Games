@@ -1,5 +1,5 @@
 ## Projeto de escola
-Um crud feito em PHP(puro), banco de dados MYSQL e frontend HTML,CSS e javascript
+Um crud feito em PHP, banco de dados MYSQL e HTML,CSS e javascript
 
 ## Corpo do site
 <img src="https://imgur.com/NLgjr0J.png"/>
